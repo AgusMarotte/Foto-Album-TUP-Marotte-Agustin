@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = "es">
+  <head>
+    <meta charset = "UTF-8" />
+    <title>Album de Fotos</title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}"/>
+  </head>
+  <body>
+    <header>
+      <h1>Album de Fotos</h1>
+      <a
+        href = "{{ url_for('main.add_photo') }}" id = "add-button" class = "btn-primary" >Agregar nueva foto</a
+      >
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+  </body>
+</html>
